@@ -17,7 +17,7 @@ from prompt_toolkit import PromptSession
 from prompt_toolkit.completion import Completer, Completion
 from prompt_toolkit.formatted_text import HTML
 from prompt_toolkit.styles import Style
-from autoagent.agents import get_system_triage_agent
+from autoagent.agents.system_agent.system_triage_agent import get_system_triage_agent
 from loop_utils.font_page import MC_LOGO, version_table, NOTES, GOODBYE_LOGO
 from rich.live import Live
 from autoagent.environment.docker_env import DockerEnv, DockerConfig, check_container_ports
