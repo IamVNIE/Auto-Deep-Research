@@ -27,7 +27,7 @@ GITHUB_AI_TOKEN = os.getenv('GITHUB_AI_TOKEN', None)
 AI_USER = os.getenv('AI_USER', None)
 LOCAL_ROOT = os.getenv('LOCAL_ROOT', os.getcwd())
 
-DEBUG = str_to_bool(os.getenv('DEBUG', False))
+DEBUG = str_to_bool(os.getenv('DEBUG', True))
 
 DEFAULT_LOG = str_to_bool(os.getenv('DEFAULT_LOG', False))
 LOG_PATH = os.getenv('LOG_PATH', None)
@@ -45,7 +45,7 @@ def get_architecture():
 if BASE_IMAGES is None:
     BASE_IMAGES = get_architecture()
 
-COMPLETION_MODEL = os.getenv('COMPLETION_MODEL', "claude-3-5-haiku-20241022")
+COMPLETION_MODEL = os.getenv('COMPLETION_MODEL', "gpt-4o")
 EMBEDDING_MODEL = os.getenv('EMBEDDING_MODEL', "text-embedding-3-small")
 
 MC_MODE = str_to_bool(os.getenv('MC_MODE', True))
