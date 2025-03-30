@@ -29,6 +29,18 @@ import os
 import importlib
 from autoagent.registry import registry
 
+# Explicitly import the required tools
+from .file_surfer_tool import (
+    open_local_file,
+    page_up_markdown,
+    page_down_markdown,
+    find_on_page_ctrl_f,
+    find_next,
+    visual_question_answering
+)
+from .web_tools import click
+from .terminal_tools import gen_code_tree_structure
+
 def import_tools_recursively(base_dir: str, base_package: str):
     """Recursively import all tools in .py files
     
@@ -64,4 +76,14 @@ import_tools_recursively(current_dir, 'autoagent.tools')
 globals().update(registry.tools)
 globals().update(registry.plugin_tools)
 
-__all__ = list(registry.tools.keys()) + list(registry.plugin_tools.keys())
+# Explicitly export the required tools
+__all__ = [
+    'open_local_file',
+    'page_up_markdown',
+    'page_down_markdown',
+    'find_on_page_ctrl_f',
+    'find_next',
+    'visual_question_answering',
+    'click',
+    'gen_code_tree_structure'
+] + list(registry.tools.keys()) + list(registry.plugin_tools.keys())

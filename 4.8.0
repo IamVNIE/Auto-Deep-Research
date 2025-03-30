@@ -1,0 +1,10 @@
+Requirement already satisfied: typing_extensions in f:\faceswapping\roop-unleashed_win4.3.1_install\roop-unleashed\installer_files\conda\envs\auto_deep_research\lib\site-packages (4.5.0)
+Collecting typing_extensions
+  Using cached typing_extensions-4.13.0-py3-none-any.whl.metadata (3.0 kB)
+Using cached typing_extensions-4.13.0-py3-none-any.whl (45 kB)
+Installing collected packages: typing_extensions
+  Attempting uninstall: typing_extensions
+    Found existing installation: typing_extensions 4.5.0
+    Uninstalling typing_extensions-4.5.0:
+      Successfully uninstalled typing_extensions-4.5.0
+Successfully installed typing_extensions-4.13.0

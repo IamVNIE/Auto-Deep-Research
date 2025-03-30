@@ -45,7 +45,7 @@ def get_architecture():
 if BASE_IMAGES is None:
     BASE_IMAGES = get_architecture()
 
-COMPLETION_MODEL = os.getenv('COMPLETION_MODEL', "gpt-4o")
+COMPLETION_MODEL = os.getenv('COMPLETION_MODEL', "deepseek/deepseek-chat")
 EMBEDDING_MODEL = os.getenv('EMBEDDING_MODEL', "text-embedding-3-small")
 
 MC_MODE = str_to_bool(os.getenv('MC_MODE', True))

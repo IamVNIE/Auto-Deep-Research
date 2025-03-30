@@ -28,7 +28,10 @@ import os.path as osp
 from constant import DOCKER_WORKPLACE_NAME, COMPLETION_MODEL
 import socket
 from autoagent.file_select import select_and_copy_files
+from dotenv import load_dotenv
+load_dotenv(override=True)
 
+print('OPENAI_API_KEY', os.getenv("OPENAI_API_KEY"))
 def check_port_available(port):
     """check if the port is available"""
     with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as s:
